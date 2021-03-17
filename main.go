@@ -12,5 +12,4 @@ func HelloHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", HelloHandler)
 	http.ListenAndServe(":8080", nil)
-
 }
