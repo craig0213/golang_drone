@@ -1,0 +1,13 @@
+kind: pipeline
+type: docker
+name: testdrone
+
+pipeline:
+  testing:
+    image:golang:1.14.0
+    commands:
+      - go test -v bench .
+      - go vet
+    when:
+      branch:
+        - master
